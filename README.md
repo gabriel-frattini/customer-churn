@@ -8,7 +8,7 @@
 
 - Identified churn probabilites for an average customer profile for different demographics
 
-- Built a model that predicts churn with a recall of 74.7% and specificity of 62.7% that can be used to asses different customer profiles
+- Built a model that predicts churn with a recall of ~ 75% and specificity of ~ 63% that can be used to asses different customer profiles
 
 - Built a dashboard for the bank to monitor their customer data
 
