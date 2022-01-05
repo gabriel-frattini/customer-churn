@@ -43,12 +43,7 @@ Logistic regression relies on maximum likelihood which seeks to find regression 
 There is no assumption of multivariate normality thus allowing us to so use all available data with categorical variables. It’s also worth mentioning that the coefficients from a multiple logistic regression yields about the same log odds as with single predictor variables which also supports the argument that the variables are not correlated to each other.
 
 
-> log.model<- glm(Churn~CreditScore+Germany+Gender+Age+Balance+NumOfProducts+IsActiveMember, data=df, family = "binomial")
-> exp(log.model$coefficients)
-    (Intercept)     CreditScore         Germany      GenderMale 
-      0.0318904       0.9993342       2.1400498       0.5882688 
-            Age         Balance   NumOfProducts IsActiveMember1 
-      1.0753940       1.0268723       0.9039479       0.3423927 
+![Gist](https://gist.github.com/Gabriele-Frattini/f7af72770ba4b235b2853a7fb2625dcc#file-logistic-regression)
 
 
 If we exponentiate the log-odds we can interprate the different coefficents as the odds-ratio of churn, given that all other variables are at a fixed value.
@@ -93,14 +88,7 @@ Since we are prepared to sacrifice overall accuracy for the recall we can find t
 I decided to tune the probabilites for churn to .17 and tested the model on the test data, which yielded a sensetivity of 74.7% and specificity of 62.6%.
 Meaning that the model will predict correctly 75 out of a 100 customers who churn but it will falsely predict churn on 37 customers out of a 100 who actually stays with the bank.
 
-
-> churn.pred<-predict(log.model,test[,-10], type="response")
-> churn.class<-ifelse(churn.pred>0.17,1,0)
-> log.metric<-misclassCounts(churn.class,true.class)
-> log.metric$metrics[c("ER","Sens","Spec")]
-         ER      Sens      Spec
-1 0.3486667 0.7468553 0.6256345
-
+![Gist](https://gist.github.com/Gabriele-Frattini/2427f8485f1816b8efdb4979d0b48245)
 
 With that said the only cost for false negatives will maybe be some extra time, discounts or perks which is not so bad considering the model predicts churn right 3/4 of the time.
 
