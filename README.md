@@ -17,7 +17,6 @@ Since the cost of predicting false positives is much greater than predicting fal
 - Derived customer features that effect churn and associated odds
 - Identified churn probabilites for an average customer profile for different demographics
 - Built a model that predicts churn with a recall of ~75% and specificity of ~63% that can be used to asses different customer profiles
-- Built a dashboard for the bank to monitor their customer data
 
 ***
 
