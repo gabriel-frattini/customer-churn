@@ -1,5 +1,6 @@
 # Why R customers leaving?
 
+
 ![header_project2](https://user-images.githubusercontent.com/96744665/148269540-a351e930-3108-4c51-8bff-f5da8ccfac6b.jpg)
 ## [Dashboard](https://public.tableau.com/app/profile/gabriele.frattini/viz/CustomerChurnAnalysis_16394869852050/Dashboard1)
 
